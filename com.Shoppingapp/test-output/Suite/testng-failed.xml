@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test name="Test">
+    <classes>
+      <class name="scripts.Addingproduct"/>
+      <class name="scripts.Invalidlogin"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)" parallel="tests">
+    <classes>
+      <class name="scripts.Addingproduct">
+        <methods>
+          <include name="openapp"/>
+          <include name="closeapp"/>
+        </methods>
+      </class> <!-- scripts.Addingproduct -->
+      <class name="scripts.Invalidlogin">
+        <methods>
+          <include name="openapp"/>
+          <include name="login"/>
+          <include name="closeapp"/>
+        </methods>
+      </class> <!-- scripts.Invalidlogin -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
